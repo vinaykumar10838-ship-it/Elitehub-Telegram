@@ -2,156 +2,100 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>EliteHub | Official Telegram</title>
+<title>EliteHub | Telegram Access</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Disable Cache (All Browsers + In-App Browsers) -->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-91B27HS8T5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-91B27HS8T5');
+</script>
+
+<!-- No Cache -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
 
 <style>
-:root{
-  --bg1:#020c1a;
-  --bg2:#041a2f;
-  --card:#061c34;
-  --green:#00E676;
-  --blue:#00BFA5;
-  --white:#E0E0E0;
-}
-
-*{
-  box-sizing:border-box;
-  font-family:Segoe UI, Arial, sans-serif;
-}
-
 body{
-  margin:0;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:radial-gradient(circle at top, var(--bg2), var(--bg1));
-  color:#fff;
+margin:0;
+font-family:system-ui,-apple-system,Roboto;
+background:radial-gradient(circle at top,#0b3c5d,#061a2d);
+color:#fff;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 }
-
-.card{
-  width:94%;
-  max-width:420px;
-  background:linear-gradient(180deg,#071f38,#041629);
-  border-radius:28px;
-  padding:26px 22px 30px;
-  text-align:center;
-  box-shadow:0 30px 70px rgba(0,0,0,.6);
+.box{
+width:90%;
+max-width:420px;
+background:#071b2f;
+border-radius:22px;
+padding:28px;
+text-align:center;
+box-shadow:0 0 60px rgba(0,230,118,.2);
 }
-
-.logo{
-  width:120px;
-  height:120px;
-  margin:auto;
-  border-radius:50%;
-  overflow:hidden;
-  box-shadow:0 0 40px rgba(0,191,165,.7);
+h1{
+margin:10px 0 6px;
+font-size:30px;
+color:#00e676;
+font-weight:800;
 }
-
-.logo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.brand{
-  margin-top:16px;
-  font-size:32px;
-  font-weight:900;
-  letter-spacing:.5px;
-}
-
-.brand .elite{color:var(--green);}
-.brand .hub{color:var(--blue);}
-
-.subtitle{
-  margin-top:6px;
-  font-size:14px;
-  color:#9edcff;
-}
-
+p{opacity:.85;font-size:14px;}
 .timer{
-  margin-top:18px;
-  font-size:22px;
-  font-weight:800;
-  color:var(--green);
-  text-shadow:0 0 14px rgba(0,230,118,.8);
+margin:12px 0 18px;
+font-size:20px;
+font-weight:700;
+color:#00e676;
 }
-
-.btn{
-  margin-top:22px;
-  width:100%;
-  padding:14px;
-  border:none;
-  border-radius:18px;
-  font-size:17px;
-  font-weight:800;
-  cursor:pointer;
-  background:linear-gradient(180deg,#00E676,#00BFA5);
-  color:#012018;
+a.btn{
+display:block;
+padding:15px;
+border-radius:14px;
+background:linear-gradient(90deg,#00e676,#00bfa5);
+color:#002b23;
+font-size:18px;
+font-weight:800;
+text-decoration:none;
 }
-
-.trust{
-  margin-top:14px;
-  font-size:12px;
-  color:#9edcff;
-}
+.small{font-size:12px;opacity:.7;margin-top:12px;}
 </style>
 </head>
 
 <body>
+<div class="box">
+<h1>EliteHub</h1>
+<p>Official Telegram Channel Access</p>
 
-<div class="card">
+<div class="timer" id="t">Redirecting…</div>
 
-  <div class="logo">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjiSV-yt9bS0j-MDgTlHPrD8g5U7Bz2pbOCRKrA-cw6ydBD10TNn91U3QU6tjfrA1QFf6DCGbqpV-K_vZEOn9qO-EtGkL7fp6HfR1Op5mrpX3QdgKABcK2jtS8UgaMTkvyErN3kbY2INT1DN3NT0Q7nBWGPfrdP0hTV6PV0KhYtDRU9-yMX9ufKtOc_hs/s640/85938.jpg">
-  </div>
+<a class="btn"
+href="https://telegram.me/EliteHubCommunity"
+onclick="joinClick()">🚀 Join Telegram Channel</a>
 
-  <div class="brand">
-    <span class="elite">Elite</span><span class="hub">Hub</span>
-  </div>
-
-  <div class="subtitle">Official Telegram Channel Access</div>
-
-  <div class="timer">
-    Redirecting in <span id="count">3</span>s
-  </div>
-
-  <button class="btn" onclick="goTelegram()">
-    🚀 Join Telegram Channel
-  </button>
-
-  <div class="trust">
-    Trusted • Verified • Instant Access
-  </div>
-
+<div class="small">Trusted • Verified • Instant Access</div>
 </div>
 
 <script>
-const tgLink = "https://telegram.me/+aLXAm8BTRuM3MDVk";
+// page visit
+gtag('event','page_visit',{event_category:'Landing'});
 
-let c = 3;
-const el = document.getElementById("count");
-
-const t = setInterval(()=>{
-  c--;
-  el.textContent = c;
-  if(c <= 0){
-    clearInterval(t);
-    goTelegram();
-  }
-},1000);
-
-function goTelegram(){
-  window.location.replace(tgLink);
+function joinClick(){
+gtag('event','telegram_join',{
+event_category:'Telegram',
+event_label:'EliteHub Community'
+});
 }
-</script>
 
+// ultra-fast redirect (0.5s)
+setTimeout(()=>{
+joinClick();
+window.location.href="https://telegram.me/EliteHubCommunity";
+},500);
+</script>
 </body>
 </html>
